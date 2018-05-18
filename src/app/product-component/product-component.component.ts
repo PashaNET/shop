@@ -20,6 +20,6 @@ export class ProductComponentComponent implements OnInit {
   }
 
   onBuy() {
-    console.log("on Byu button click");
+    console.log("product was added to cart");
   }
 }
