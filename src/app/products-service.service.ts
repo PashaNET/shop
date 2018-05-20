@@ -1,13 +1,18 @@
 import { Injectable } from '@angular/core';
 
+import { ProductItem } from './models/product';
+
 @Injectable({
   providedIn: 'root'
 })
-export class ProductsServiceService {
-  // define products array
+export class ProductsService {
+
   constructor() { }
 
-  getProducts() {
-    return "";
+  getProducts(): ProductItem[] {
+    return [
+      new ProductItem(),
+      new ProductItem(),
+    ];
   }
 }

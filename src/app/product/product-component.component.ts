@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
-import { Category } from '../category.enum';
+import { ProductItem } from '../models/product';
 
 @Component({
   selector: 'app-product-component',
@@ -8,12 +8,8 @@ import { Category } from '../category.enum';
   styleUrls: ['./product-component.component.css']
 })
 export class ProductComponentComponent implements OnInit {
-  name: String;
-  description: String;
-  price: Number;
-  category: Category;
-  isAvailable: boolean;
-  
+  @Input() productItem: ProductItem;
+
   constructor() { }
 
   ngOnInit() {
